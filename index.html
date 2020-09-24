@@ -21,44 +21,95 @@
             <div class="col-xs-12">
 
                 <select id="start_select" class="form-control" onchange="showForms()">
-                    <option value="" selected="" disabled="" hidden="">Сделайте выбор</option>
-                    <option value="1">Первая опция</option>
-                    <option value="2">Впорая комбинапция</option>
+                    <option
+                        data-json='[{"id":"f1","hidden":0,"required":1},{"id":"f2","hidden":0,"required":1},{"id":"f3","hidden":0,"required":0},{"id":"f4","hidden":0,"required":0},{"id":"f5","hidden":0,"required":0},{"id":"f6","hidden":0,"required":0}]'>
+                        Первая опция</option>
+                    <option
+                        data-json='[{"id":"f3","hidden":1,"required":0},{"id":"f6","hidden":1,"required":0},{"id":"f4","hidden":0,"required":0},{"id":"f5","hidden":0,"required":0}]'>
+                        Впорая комбинапция</option>
                 </select>
 
 
                 <form id="new_form">
-                    <input type="text" id="11" value="11">
-                    <input type="text" id="12" value="12">
-                    <input type="text" id="21" value="21">
-                    <input type="text" id="22" value="22">
+
+                    <div class="form-group" id="f1">
+                        <label for="exampleFormControlInput1">Email address</label>
+                        <input type="email" class="form-control" id="exampleFormControlInput1"
+                            placeholder="name@example.com">
+                    </div>
+
+                    <div class="form-group" id="f2">
+                        <label for="exampleFormControlSelect1">Example select</label>
+                        <select class="form-control" id="exampleFormControlSelect1">
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group" id="f3">
+                        <label for="exampleFormControlSelect2">Example multiple select</label>
+                        <select multiple class="form-control" id="exampleFormControlSelect2">
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group" id="f4">
+                        <label for="exampleFormControlTextarea1">Example textarea</label>
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                    </div>
                     <hr>
-                    <input type="button">
-                    <input type="button">
-                    <input type="checkbox">
-                    <input type="color">
-                    <input type="date">
-                    <input type="datetime-local">
-                    <input type="email">
-                    <input type="file">
-                    <input type="hidden">
-                    <input type="image">
-                    <input type="month">
-                    <input type="number">
-                    <input type="radio">
-                    <input type="range">
-                    <input type="reset">
-                    <input type="search">
-                    <input type="submit">
-                    <input type="tel">
-                    <input type="text">
-                    <input type="time">
-                    <input type="url">
-                    <input type="week">
-                    
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Username" aria-describedby="basic-addon1">
+                    </div>
+
+
+                    <div class="form-check" id="f5">
+                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                        <label class="form-check-label" for="defaultCheck1">
+                            Default checkbox
+                        </label>
+                    </div>
+
+                    <div class="form-check" >
+                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck2" disabled>
+                        <label class="form-check-label" for="defaultCheck2">
+                            Disabled checkbox
+                        </label>
+                    </div>
+
+                    <div class="form-check" id="f6">
+                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1"
+                            value="option1" checked>
+                        <label class="form-check-label" for="exampleRadios1">
+                            Default radio
+                        </label>
+                    </div>
+
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2"
+                            value="option2">
+                        <label class="form-check-label" for="exampleRadios2">
+                            Second default radio
+                        </label>
+                    </div>
+
+                    <div class="form-check disabled">
+                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3"
+                            value="option3" disabled>
+                        <label class="form-check-label" for="exampleRadios3">
+                            Disabled radio
+                        </label>
+                    </div>
+
                 </form>
 
-                <p id="demo3"></p>
             </div>
         </div>
     </div>

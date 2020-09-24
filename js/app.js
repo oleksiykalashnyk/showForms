@@ -1,33 +1,37 @@
 "use strict";
 
-let serverJSON = '[{"inputs":[{"idInput":"11","hidden":0,"required":1},{"idInput":"12","hidden":0,"required":0},{"idInput":"21","hidden":0,"required":1},{"idInput":"22","hidden":0,"required":0}]},{"inputs":[{"idInput":"11","hidden":1,"required":0},{"idInput":"12","hidden":1,"required":0},{"idInput":"21","hidden":0,"required":1},{"idInput":"22","hidden":0,"required":1}]}]';
 
-let formInfo = JSON.parse(serverJSON),
+let iputInfo = {},
     selectStart = document.getElementById("start_select"),
-    selectedForm = document.getElementById("new_form");
+    selectedForm = document.getElementById("new_form"),
 
-function showForms() {
-    let x = document.getElementById("start_select").value;
-    for (let i = 0; i < formInfo[x - 1].inputs.length; i++) {
+    checkSelect = () => {
+        let selected = selectStart.options[selectStart.selectedIndex];
+        let extra = selected.getAttribute('data-json');
+        iputInfo = JSON.parse(extra);
+    },
 
-        let idInput = formInfo[x - 1].inputs[i].idInput,
-            hiddenInput = +formInfo[x - 1].inputs[i].hidden,
-            requiredInput = +formInfo[x - 1].inputs[i].required,
-            inputEdit = document.getElementById(idInput);
+    showForms = () => {
+        checkSelect();
 
-        if (requiredInput == 1) {
-            hiddenInput = 0;
-            inputEdit.setAttribute("required", "");
-        } else {
-            inputEdit.removeAttribute("required", "");
+        let allDivs = selectedForm.querySelectorAll("div");
+        allDivs.forEach(item => {
+            // item.setAttribute("hidden", "hidden");
+            item.style.display = "none";
+        });
+
+        for (let i = 1; i <= iputInfo.length; i++){
+            let showInput = selectedForm.querySelector("#"+ iputInfo[i-1].id);
+            showInput.style.display = "block";
+            console.log(showInput);
+
+            // showInput.setAttribute("hidden", "");
+            // showInput.style.display = "block";
         }
 
-        if (hiddenInput == 1) {
-            inputEdit.setAttribute("hidden", "hidden");
-        } else {
-            inputEdit.removeAttribute( "hidden");
-        }
+    };
 
-    }
-    // document.getElementById("demo3").innerHTML = "Вы находитесь в " + x + " выборе";
-}
+
+
+
+showForms();
