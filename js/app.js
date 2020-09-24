@@ -1,8 +1,10 @@
 "use strict";
 
-
 let iputInfo = {},
     selectedAllInput,
+    inputInDiv,
+    tagName,
+    attrName,
     selectStart = document.getElementById("start_select"),
     selectedForm = document.getElementById("new_form"),
 
@@ -30,22 +32,28 @@ let iputInfo = {},
         //Show all inputs where hidden "0" and set requireds if required "1"
         for (let i = 1; i <= iputInfo.length; i++) {
             let showInput = selectedForm.querySelector("#" + iputInfo[i - 1].id);
-            let inputInDiv = showInput.querySelector('input');
+            //Read tags type and tags name
+            for (let i = 1; i <= showInput.children.length; i++) {
+                tagName = showInput.children[i - 1].tagName.toLocaleLowerCase();
+                attrName = showInput.children[i - 1].type;
+                inputInDiv = showInput.querySelector(tagName);
+            }
 
-            xxx.push(showInput);
-            
-            if(iputInfo[i - 1].hidden == 0){
+            //Show block if hidden "0"
+            if (iputInfo[i - 1].hidden == 0) {
                 showInput.style.display = "block";
-            }else{
+            } else {
                 iputInfo[i - 1].required = 0;
             }
 
-            if (iputInfo[i - 1].required == 1) {
-                inputInDiv.required = true;
-                showInput.style.display = "block";
+            //Check tag type for input
+            if (attrName == 'checkbox' || attrName == 'date' || attrName == 'datetime' || attrName == 'email' || attrName == 'file' || attrName == 'month' || attrName == 'number' || attrName == 'password' || attrName == 'radio' || attrName == 'search' || attrName == 'tel' || attrName == 'text' || attrName == 'time' || attrName == 'url' || attrName == 'week') {
+                if (iputInfo[i - 1].required == 1) {
+                    inputInDiv.required = true;
+                    showInput.style.display = "block";
+                }
             }
+
         }
     };
-
-var xxx =[];
 showForms();
