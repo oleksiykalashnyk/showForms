@@ -1,0 +1,115 @@
+[{
+    "name": "Первая опция",
+    "inputs": [{
+        "type": "email",
+        "hidden": 0,
+        "required": 1,
+        "placeholder": "Введите емейл 1",
+        "label": "Email address",
+        "value": ""
+      },
+      {
+        "type": "text",
+        "hidden": 0,
+        "required": 0,
+        "placeholder": "Введите пароль 1",
+        "label": "Email address",
+        "value": ""
+      }
+    ]
+  },
+
+  {
+    "name": "Впорая комбинапция",
+    "inputs": [{
+        "type": "email",
+        "hidden": 1,
+        "required": 0,
+        "placeholder": "Введите емейл 2",
+        "label": "Email address",
+        "value": "2"
+      },
+      {
+        "type": "text",
+        "hidden": 0,
+        "required": 0,
+        "placeholder": "Введите пароль 2",
+        "label": "Email address",
+        "value": 8
+      },
+      {
+        "type": "textarea",
+        "hidden": 0,
+        "required": 0,
+        "placeholder": "Введите БОЛЬШОЙ ТЕКСТ 2",
+        "label": "Email address",
+        "value": ""
+      }
+    ]
+  },
+  {
+    "name": "Третий варик",
+    "inputs": [{
+        "type": "number",
+        "hidden": 0,
+        "required": 1,
+        "placeholder": "Введите number  3",
+        "label": "Дай number",
+        "value": 4
+      },
+      {
+        "type": "date",
+        "hidden": 0,
+        "required": 0,
+        "placeholder": "",
+        "label": "Второе поле",
+        "value": ""
+      },
+      {
+        "type": "radio",
+        "hidden": 0,
+        "required": 0,
+        "placeholder": "",
+        "label": "Важно очень",
+        "value": "Первое"
+      }
+    ]
+  },
+  {
+    "name": "Всё возможное",
+    "inputs": [{
+        "type": "email",
+        "hidden": 0,
+        "required": 1,
+        "placeholder": "Введите емейл 3",
+        "label": "Email address",
+        "value": ""
+      },
+      {
+        "type": "date",
+        "hidden": 0,
+        "required": 0,
+        "placeholder": "",
+        "label": "Email address",
+        "value": ""
+      },
+      {
+        "type": "radio",
+        "hidden": 0,
+        "required": 0,
+        "placeholder": "",
+        "label": "radio address",
+        "value": ""
+      },
+      {
+        "type": "checkbox",
+        "hidden": 0,
+        "required": 0,
+        "placeholder": "",
+        "label": "checkbox address",
+        "value": ""
+      }
+    ]
+  }
+
+]
