@@ -23,9 +23,9 @@ function showForms() {
         }
 
         if (hiddenInput == 1) {
-            inputEdit.setAttribute("type", "hidden");
+            inputEdit.setAttribute("hidden", "hidden");
         } else {
-            inputEdit.removeAttribute("type", "hidden");
+            inputEdit.removeAttribute( "hidden");
         }
 
     }
