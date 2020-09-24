@@ -20,22 +20,20 @@
         <div class="row">
             <div class="col-xs-12">
 
-                <select id="start_select" class="form-control" onchange="showForms()">
-                    <option
-                        data-json='[{"id":"f1","hidden":0,"required":1},{"id":"f2","hidden":0,"required":1},{"id":"f3","hidden":0,"required":0},{"id":"f4","hidden":0,"required":0},{"id":"f5","hidden":0,"required":0},{"id":"f6","hidden":0,"required":0}]'>
-                        Первая опция</option>
-                    <option
-                        data-json='[{"id":"f3","hidden":1,"required":0},{"id":"f6","hidden":1,"required":0},{"id":"f4","hidden":0,"required":0},{"id":"f5","hidden":0,"required":0}]'>
-                        Впорая комбинапция</option>
-                </select>
-
-
-                <form id="new_form">
+                <form id="new_form" action="" method="GET">
+                    <select id="start_select" class="form-control" onchange="showForms()">
+                        <option
+                            data-json='[{"id":"f1","hidden":0,"required":1},{"id":"f2","hidden":0,"required":0},{"id":"f3","hidden":0,"required":0},{"id":"f4","hidden":0,"required":0},{"id":"f5","hidden":0,"required":0},{"id":"f6","hidden":0,"required":1}]'>
+                            Первая опция</option>
+                        <option
+                            data-json='[{"id":"f3","hidden":1,"required":0},{"id":"f6","hidden":1,"required":0},{"id":"f4","hidden":0,"required":0},{"id":"f6","hidden":0,"required":0},{"id":"f7","hidden":0,"required":0},{"id":"f8","hidden":0,"required":0}]'>
+                            Впорая комбинапция</option>
+                    </select>
 
                     <div class="form-group" id="f1">
                         <label for="exampleFormControlInput1">Email address</label>
                         <input type="email" class="form-control" id="exampleFormControlInput1"
-                            placeholder="name@example.com">
+                            placeholder="name@example.com" name="emaiiil">
                     </div>
 
                     <div class="form-group" id="f2">
@@ -77,7 +75,7 @@
                         </label>
                     </div>
 
-                    <div class="form-check" >
+                    <div class="form-check">
                         <input class="form-check-input" type="checkbox" value="" id="defaultCheck2" disabled>
                         <label class="form-check-label" for="defaultCheck2">
                             Disabled checkbox
@@ -92,22 +90,24 @@
                         </label>
                     </div>
 
-                    <div class="form-check">
+                    <div class="form-check" id="f8">
                         <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2"
                             value="option2">
                         <label class="form-check-label" for="exampleRadios2">
                             Second default radio
                         </label>
                     </div>
-
-                    <div class="form-check disabled">
-                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3"
-                            value="option3" disabled>
-                        <label class="form-check-label" for="exampleRadios3">
-                            Disabled radio
+                    <div class="form-check" id="f7">
+                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRa33dios2"
+                            value="option2">
+                        <label class="form-check-label" for="exampleRa33dios2">
+                            3 default radio
                         </label>
                     </div>
 
+                    
+
+                    <button type="submit">S</button>
                 </form>
 
             </div>
